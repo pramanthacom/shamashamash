@@ -492,6 +492,64 @@ blockquote {
   color: #4f5d5a;
 }
 
+.roots-visual {
+  position: relative;
+  min-height: 470px;
+  margin: 72px 0 0;
+  overflow: hidden;
+  background: #9f8e76;
+}
+
+.roots-visual::after,
+.meaning-visual::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(0deg, rgba(7, 14, 16, 0.78) 0%, rgba(7, 14, 16, 0.08) 64%);
+}
+
+.roots-visual img,
+.meaning-visual img,
+.guide-portrait img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.roots-visual img,
+.meaning-visual img {
+  position: absolute;
+  inset: 0;
+}
+
+.roots-visual figcaption {
+  position: absolute;
+  z-index: 2;
+  right: clamp(28px, 5vw, 72px);
+  bottom: clamp(28px, 5vw, 60px);
+  left: clamp(28px, 5vw, 72px);
+  color: var(--warm-paper);
+}
+
+.roots-visual figcaption span {
+  display: block;
+  margin-bottom: 14px;
+  color: var(--ice);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.roots-visual figcaption strong {
+  display: block;
+  max-width: 780px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2rem, 4vw, 4.2rem);
+  font-weight: 400;
+  line-height: 1;
+}
+
 .roots-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -681,28 +739,80 @@ blockquote {
   align-items: start;
 }
 
-.origin-card {
+.meaning-lenses {
   margin-top: 52px;
-  padding: 42px;
-  border: 1px solid rgba(36, 48, 51, 0.18);
-  background: #dfe5e2;
+  border-top: 1px solid rgba(36, 48, 51, 0.18);
 }
 
-.origin-card p {
+.meaning-lenses p {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 24px;
+  margin: 0;
+  padding: 22px 0;
+  border-bottom: 1px solid rgba(36, 48, 51, 0.18);
   color: #52615e;
-  font-size: 0.98rem;
+  font-size: 0.94rem;
+  line-height: 1.55;
 }
 
-.origin-card .origin-label {
-  color: #3e8797;
-  font-size: 0.72rem;
+.meaning-lenses span {
+  color: #315f6a;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
 }
 
-.portrait-placeholder {
-  min-height: 700px;
-  background:
-    radial-gradient(ellipse at 50% 38%, rgba(81, 215, 239, 0.2), transparent 18%),
-    linear-gradient(160deg, #cfdbd7, #e7ebe8);
+.meaning-visual {
+  position: relative;
+  min-height: 760px;
+  margin: 0;
+  overflow: hidden;
+  background: var(--deep);
+}
+
+.meaning-visual figcaption {
+  position: absolute;
+  z-index: 2;
+  right: 36px;
+  bottom: 36px;
+  left: 36px;
+  color: var(--warm-paper);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.45rem, 2.5vw, 2.5rem);
+  line-height: 1.1;
+}
+
+.guide-portrait {
+  position: relative;
+  min-height: 720px;
+  margin: 0;
+  overflow: hidden;
+  background: var(--deep);
+}
+
+.guide-portrait img {
+  position: absolute;
+  inset: 0;
+  object-position: center 38%;
+}
+
+.guide-portrait::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(0deg, rgba(5, 12, 14, 0.62), transparent 35%);
+}
+
+.guide-portrait figcaption {
+  position: absolute;
+  z-index: 2;
+  right: 22px;
+  bottom: 18px;
+  color: rgba(244, 246, 242, 0.58);
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
 }
 
 .guide-intro {
@@ -1229,6 +1339,11 @@ dd {
     margin-top: 58px;
   }
 
+  .roots-visual {
+    min-height: 420px;
+    margin-top: 52px;
+  }
+
   .roots-grid {
     grid-template-columns: 1fr;
   }
@@ -1281,6 +1396,10 @@ dd {
 
   .faq-grid h2 {
     position: static;
+  }
+
+  .meaning-visual {
+    min-height: 640px;
   }
 }
 
@@ -1389,11 +1508,6 @@ dd {
     flex-direction: column;
   }
 
-  .visual-placeholder,
-  .portrait-placeholder {
-    min-height: 440px;
-  }
-
   .two-lists,
   .purpose-grid,
   .safety-grid {
@@ -1413,8 +1527,25 @@ dd {
     border-bottom-color: rgba(81, 215, 239, 0.18);
   }
 
-  .origin-card {
-    padding: 28px;
+  .roots-visual {
+    min-height: 340px;
+  }
+
+  .roots-visual figcaption strong {
+    font-size: clamp(1.8rem, 9vw, 2.8rem);
+  }
+
+  .meaning-lenses p {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .meaning-visual {
+    min-height: 520px;
+  }
+
+  .guide-portrait {
+    min-height: 560px;
   }
 
   .guide-facts div,
