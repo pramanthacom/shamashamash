@@ -455,6 +455,7 @@ p {
   display: flex;
   align-items: center;
   min-height: 100svh;
+  margin-top: 18px;
   overflow: hidden;
   padding-top: clamp(64px, 7vw, 88px);
   padding-bottom: clamp(64px, 7vw, 88px);
@@ -817,6 +818,58 @@ blockquote {
   text-transform: uppercase;
 }
 
+.roots-research-context {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.75fr) minmax(0, 1.25fr);
+  gap: clamp(42px, 7vw, 100px);
+  margin-top: 22px;
+  padding: 30px 36px;
+  background:
+    repeating-linear-gradient(112deg, transparent 0 8px, rgba(98, 205, 232, 0.035) 9px 9.8px),
+    var(--deep);
+}
+
+.roots-research-context span,
+.roots-lab-note strong {
+  display: block;
+  margin-bottom: 12px;
+  color: var(--ice);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.roots-research-context h3 {
+  max-width: 430px;
+  margin-bottom: 0;
+  color: var(--warm-paper);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.65rem, 2.35vw, 2.5rem);
+  font-weight: 400;
+  line-height: 1.08;
+}
+
+.roots-research-context > div:last-child > p:first-child {
+  margin-bottom: 0;
+  color: #c3ceca;
+  font-size: 0.96rem;
+  line-height: 1.55;
+}
+
+.roots-research-context .roots-lab-note {
+  margin: 18px 0 0;
+  padding-top: 16px;
+  border-top: 1px solid rgba(98, 205, 232, 0.18);
+  color: #96a7a2;
+  font-size: 0.8rem;
+  line-height: 1.48;
+}
+
+.roots-lab-note strong {
+  margin-bottom: 7px;
+}
+
 .trust-formula {
   display: grid;
   grid-template-columns: 180px minmax(0, 1fr);
@@ -995,7 +1048,7 @@ blockquote {
 
 .meaning h2 {
   margin-bottom: 32px;
-  font-size: clamp(2.8rem, 4.5vw, 4.8rem);
+  font-size: clamp(2.8rem, 4vw, 4.25rem);
 }
 
 .meaning-lenses {
@@ -1044,7 +1097,7 @@ blockquote {
   position: relative;
   height: 560px;
   min-height: 0;
-  margin: 0;
+  margin: 58px 0 0;
   overflow: hidden;
   background: var(--deep);
 }
@@ -1061,7 +1114,7 @@ blockquote {
   left: 36px;
   color: var(--warm-paper);
   font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(1.45rem, 2.5vw, 2.5rem);
+  font-size: clamp(1.25rem, 1.8vw, 1.85rem);
   line-height: 1.1;
 }
 
@@ -1192,7 +1245,18 @@ dd {
   grid-template-columns: minmax(0, 1.15fr) minmax(340px, 0.7fr);
   gap: clamp(50px, 8vw, 130px);
   align-items: start;
-  margin-bottom: 64px;
+  margin-bottom: 38px;
+}
+
+.safety.section-dark {
+  padding-top: 76px;
+  padding-bottom: 68px;
+}
+
+.safety h2 {
+  max-width: 720px;
+  margin-bottom: 0;
+  font-size: clamp(2.8rem, 4.5vw, 4.8rem);
 }
 
 .safety-heading > div > p:first-child {
@@ -1215,8 +1279,8 @@ dd {
 }
 
 .safety-principles article {
-  min-height: 230px;
-  padding: 30px 34px;
+  min-height: 150px;
+  padding: 22px 28px 24px;
   border-right: 1px solid rgba(81, 215, 239, 0.18);
 }
 
@@ -1231,7 +1295,7 @@ dd {
 
 .safety-principles span {
   display: block;
-  margin-bottom: 38px;
+  margin-bottom: 18px;
   color: var(--ice);
   font-size: 0.72rem;
   letter-spacing: 0.14em;
@@ -1240,15 +1304,15 @@ dd {
 .safety-principles h3 {
   color: var(--warm-paper);
   font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(1.35rem, 2vw, 1.9rem);
+  font-size: clamp(1.2rem, 1.65vw, 1.55rem);
   font-weight: 400;
 }
 
 .safety-principles p {
   margin: 0;
   color: #aebbb7;
-  font-size: 0.94rem;
-  line-height: 1.55;
+  font-size: 0.88rem;
+  line-height: 1.48;
 }
 
 .safety-boundary {
@@ -1281,7 +1345,7 @@ dd {
 }
 
 .safety-disclaimer {
-  margin: 24px 0 0;
+  margin: 16px 0 0;
   color: #84928e;
   font-size: 0.82rem;
   line-height: 1.5;
@@ -1738,6 +1802,7 @@ dd {
   .purpose-intro,
   .purpose-outcome,
   .roots-heading,
+  .roots-research-context,
   .section-heading-row,
   .meaning,
   .flow-heading,
@@ -1792,6 +1857,10 @@ dd {
 
   .roots-grid article:last-child {
     border-bottom: 0;
+  }
+
+  .roots-research-context {
+    gap: 24px;
   }
 
   .hero {
@@ -1861,6 +1930,7 @@ dd {
   .meaning-visual {
     height: 460px;
     min-height: 0;
+    margin-top: 24px;
   }
 }
 
@@ -1971,6 +2041,10 @@ dd {
 
   .research-accent {
     padding: 24px 22px;
+  }
+
+  .roots-research-context {
+    padding: 26px 22px;
   }
 
   .source-links {
@@ -2099,6 +2173,11 @@ dd {
   .meaning-visual {
     height: 400px;
     min-height: 0;
+    margin-top: 16px;
+  }
+
+  .arrival-screen {
+    margin-top: 12px;
   }
 
   .flow-steps {
@@ -2123,7 +2202,7 @@ dd {
   .safety-principles article:first-child,
   .safety-principles article:last-child {
     min-height: 0;
-    padding: 28px 0;
+    padding: 20px 0;
     border-right: 0;
     border-bottom: 1px solid rgba(81, 215, 239, 0.18);
   }
@@ -2133,7 +2212,7 @@ dd {
   }
 
   .safety-principles span {
-    margin-bottom: 20px;
+    margin-bottom: 14px;
   }
 
   .safety-boundary {
