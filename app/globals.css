@@ -427,10 +427,6 @@ p {
 }
 
 .value-return {
-  display: grid;
-  grid-template-columns: minmax(0, 1.1fr) minmax(280px, 0.7fr);
-  gap: clamp(40px, 7vw, 90px);
-  align-items: end;
   margin-top: 28px;
   padding-top: 24px;
   border-top: 1px solid rgba(23, 49, 59, 0.18);
@@ -443,12 +439,6 @@ p {
   font-family: Georgia, "Times New Roman", serif;
   font-size: clamp(1.4rem, 2.25vw, 2.25rem);
   line-height: 1.12;
-}
-
-.value-return small {
-  color: #687571;
-  font-size: 0.76rem;
-  line-height: 1.5;
 }
 
 .arrival-screen {
@@ -1739,8 +1729,7 @@ dd {
   }
 
   .value-head,
-  .arrival-head,
-  .value-return {
+  .arrival-head {
     gap: 22px;
   }
 
