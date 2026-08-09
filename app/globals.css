@@ -798,6 +798,25 @@ blockquote {
   color: #bdc8c4;
 }
 
+.roots-grid .roots-modern .roots-evidence {
+  margin-top: 20px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(98, 205, 232, 0.2);
+  color: #9eafaa;
+  font-size: 0.82rem;
+  line-height: 1.48;
+}
+
+.roots-evidence strong {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--ice);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
 .trust-formula {
   display: grid;
   grid-template-columns: 180px minmax(0, 1fr);
@@ -1303,6 +1322,11 @@ dd {
   padding: clamp(36px, 6vw, 74px);
   background: var(--ink);
   color: var(--warm-paper);
+}
+
+.meeting {
+  padding-right: 0;
+  padding-left: 0;
 }
 
 .meeting-card h2 {
