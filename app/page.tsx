@@ -56,8 +56,11 @@ export default function Home() {
   return (
     <main>
       <header className="site-header">
-        <a className="wordmark" href="#top" aria-label="Шамаш — к началу страницы">
-          Шамаш
+        <a className="brand-lockup" href="#top" aria-label="Шамаш — к началу страницы">
+          <span className="brand-symbol" aria-hidden="true">
+            <img src="/shamash-symbol.png" alt="" />
+          </span>
+          <span className="wordmark">Шамаш</span>
         </a>
         <nav className="desktop-nav" aria-label="Основная навигация">
           <a href="#practice">О практике</a>
@@ -69,37 +72,33 @@ export default function Home() {
       </header>
 
       <section className="hero section-dark" id="top">
-        <h1 className="sr-only">Внутреннее путешествие под ритм</h1>
-
-        <div className="hero-art">
+        <div className="hero-art" aria-hidden="true">
           <img
-            src="/og.png"
-            alt="Шамаш. Внутреннее путешествие под ритм — световая волна и концентрические круги на тёмном фоне"
+            src="/hero-background.png"
+            alt=""
+            fetchPriority="high"
           />
         </div>
 
-        <div className="hero-details">
-          <div className="hero-copy">
-            <p className="eyebrow">Групповая практика изменённого внимания</p>
-            <p className="hero-lead">
-              Трансовое погружение, в котором повторяющийся звук, внимание к телу
-              и личное намерение помогают отойти от привычного хода мыслей и
-              встретиться со своим внутренним опытом.
-            </p>
+        <div className="hero-content">
+          <p className="eyebrow">Групповая практика изменённого внимания</p>
+          <h1>Внутреннее путешествие под ритм</h1>
+          <p className="hero-lead">
+            Трансовое погружение, в котором ритм, внимание к телу и личное
+            намерение помогают выйти из привычного хода мыслей и встретиться
+            со своим внутренним опытом.
+          </p>
+          <div className="hero-actions">
+            <ScheduleButton label="Ближайшие встречи" />
+            <a className="text-link" href="#practice">
+              Как это происходит
+            </a>
           </div>
-          <div className="hero-cta">
-            <div className="hero-actions">
-              <ScheduleButton label="Узнать о ближайшей встрече" />
-              <a className="text-link" href="#practice">
-                Сначала понять, что это
-              </a>
-            </div>
-            <ul className="hero-facts" aria-label="Кратко о формате">
-              <li>Раз в неделю</li>
-              <li>До 20 человек</li>
-              <li>Без психоактивных веществ</li>
-            </ul>
-          </div>
+          <ul className="hero-facts" aria-label="Кратко о формате">
+            <li>Раз в неделю</li>
+            <li>До 20 человек</li>
+            <li>Без психоактивных веществ</li>
+          </ul>
         </div>
       </section>
 
@@ -356,7 +355,10 @@ export default function Home() {
       <footer className="site-footer">
         <div className="footer-main">
           <div className="footer-brand">
-            <a className="wordmark" href="#top">Шамаш</a>
+            <a className="brand-lockup" href="#top">
+              <span className="brand-symbol" aria-hidden="true"><img src="/shamash-symbol.png" alt="" loading="lazy" /></span>
+              <span className="wordmark">Шамаш</span>
+            </a>
             <p>Пространство внутреннего путешествия под ритм.</p>
             <p className="footer-note">Без готовых толкований. С вниманием к человеку и его границам.</p>
           </div>
