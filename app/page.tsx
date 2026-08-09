@@ -1,3 +1,6 @@
+import { CookieNotice } from "./components/CookieNotice";
+import { ScheduleButton } from "./components/ScheduleButton";
+
 const journeySteps = [
   {
     number: "01",
@@ -62,9 +65,7 @@ export default function Home() {
           <a href="#guide">О ведущем</a>
           <a href="#safety">Безопасность</a>
         </nav>
-        <a className="button button-small" href="#meeting">
-          Ближайшая встреча
-        </a>
+        <ScheduleButton compact label="Ближайшая встреча" />
       </header>
 
       <section className="hero section-dark" id="top">
@@ -88,9 +89,7 @@ export default function Home() {
           </div>
           <div className="hero-cta">
             <div className="hero-actions">
-              <a className="button" href="#meeting">
-                Узнать о ближайшей встрече
-              </a>
+              <ScheduleButton label="Узнать о ближайшей встрече" />
               <a className="text-link" href="#practice">
                 Сначала понять, что это
               </a>
@@ -333,10 +332,8 @@ export default function Home() {
             </div>
           </dl>
           <div className="meeting-action" id="telegram">
-            <button className="button button-disabled" type="button" disabled>
-              Telegram-бот подключим сюда
-            </button>
-            <p>Онлайн-оплаты на сайте пока нет.</p>
+            <ScheduleButton label="Показать ближайшие встречи" />
+            <p>Запись и вопросы перенесём в Telegram. Онлайн-оплаты на сайте пока нет.</p>
           </div>
         </div>
       </section>
@@ -356,13 +353,39 @@ export default function Home() {
         </div>
       </section>
 
-      <footer>
-        <a className="wordmark" href="#top">
-          Шамаш
-        </a>
-        <p>Пространство внутреннего путешествия под ритм.</p>
-        <p>Первая версия каркаса · тексты и фотографии уточняются</p>
+      <footer className="site-footer">
+        <div className="footer-main">
+          <div className="footer-brand">
+            <a className="wordmark" href="#top">Шамаш</a>
+            <p>Пространство внутреннего путешествия под ритм.</p>
+            <p className="footer-note">Без готовых толкований. С вниманием к человеку и его границам.</p>
+          </div>
+
+          <div className="footer-column">
+            <p className="footer-label">Исследовать</p>
+            <a href="#practice">О практике</a>
+            <a href="#journey">Как проходит встреча</a>
+            <a href="#guide">О ведущем</a>
+            <a href="#safety">Безопасность</a>
+          </div>
+
+          <div className="footer-column">
+            <p className="footer-label">Быть на связи</p>
+            <span>Telegram-сообщество — скоро</span>
+            <span>Контакт для вопросов — скоро</span>
+            <ScheduleButton compact label="Ближайшие встречи" />
+          </div>
+        </div>
+
+        <div className="footer-bottom">
+          <p>© 2026 Шамаш</p>
+          <div>
+            <a href="/privacy">Конфиденциальность и cookies</a>
+            <a href="/admin">Управление расписанием</a>
+          </div>
+        </div>
       </footer>
+      <CookieNotice />
     </main>
   );
 }

@@ -1,0 +1,1 @@
+CREATE INDEX `idx_sessions_starts_at` ON `sessions` (`starts_at`);
