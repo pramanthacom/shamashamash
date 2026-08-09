@@ -239,7 +239,7 @@ export default function Home() {
 
       </section>
 
-      <section className="meaning section-paper">
+      <section className="meaning section-light">
         <div className="meaning-copy">
           <p className="section-index">04 / Один опыт — разные слои</p>
           <h2>Не нужно заранее выбирать, во что верить</h2>
@@ -261,7 +261,7 @@ export default function Home() {
         </figure>
       </section>
 
-      <section className="journey-flow section-light" id="how-it-goes">
+      <section className="journey-flow section-dark" id="how-it-goes">
         <div className="flow-heading">
           <div>
             <p className="section-index">05 / Как проходит встреча</p>
@@ -302,7 +302,7 @@ export default function Home() {
         </ol>
       </section>
 
-      <section className="guide section-light" id="guide">
+      <section className="guide section-paper" id="guide">
         <figure className="guide-portrait">
           <img
             src="/guide-portrait-new.png"
@@ -341,15 +341,14 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="safety section-dark" id="safety">
+      <section className="safety section-light safety-cool" id="safety">
         <p className="section-index">07 / Безопасность</p>
         <div className="safety-heading">
           <h2>Транс — естественная способность</h2>
           <div>
             <p>
               Ритм, поза и намерение помогают осознанно изменить привычный режим
-              восприятия и получить новый внутренний опыт. В шаманской традиции
-              это называют дверью в сакральную действительность.
+              восприятия и получить новый внутренний опыт.
             </p>
           </div>
         </div>
@@ -378,7 +377,7 @@ export default function Home() {
         </p>
       </section>
 
-      <section className="meeting section-light" id="meeting">
+      <section className="meeting" id="meeting">
         <div className="meeting-card">
           <div>
             <p className="section-index">08 / Ближайшая встреча</p>

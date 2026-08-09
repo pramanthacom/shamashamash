@@ -1041,9 +1041,10 @@ blockquote {
   gap: clamp(52px, 7vw, 105px);
 }
 
-.meaning.section-paper {
+.meaning.section-light {
   padding-top: 78px;
   padding-bottom: 78px;
+  background-color: #e1e9e6;
 }
 
 .meaning h2 {
@@ -1178,6 +1179,30 @@ blockquote {
   line-height: 1.5;
 }
 
+.journey-flow .flow-heading > p {
+  color: #b8c4c0;
+}
+
+.journey-flow .flow-steps {
+  border-color: rgba(98, 205, 232, 0.24);
+}
+
+.journey-flow .flow-steps li {
+  border-color: rgba(98, 205, 232, 0.18);
+}
+
+.journey-flow .flow-steps span {
+  color: var(--ice);
+}
+
+.journey-flow .flow-steps h3 {
+  color: var(--warm-paper);
+}
+
+.journey-flow .flow-steps p {
+  color: #aebbb7;
+}
+
 .guide-portrait {
   position: relative;
   min-height: 720px;
@@ -1248,7 +1273,7 @@ dd {
   margin-bottom: 38px;
 }
 
-.safety.section-dark {
+.safety {
   padding-top: 76px;
   padding-bottom: 68px;
 }
@@ -1351,6 +1376,43 @@ dd {
   line-height: 1.5;
 }
 
+.safety.safety-cool {
+  background-color: #d8e5e2;
+  background-image:
+    radial-gradient(circle at 90% 8%, rgba(98, 205, 232, 0.14), transparent 26%),
+    repeating-linear-gradient(112deg, transparent 0 10px, rgba(7, 16, 19, 0.018) 11px 11.7px);
+  color: var(--ink);
+}
+
+.safety-cool .section-index,
+.safety-cool .safety-principles span {
+  color: #31788a;
+}
+
+.safety-cool .safety-heading > div > p:first-child {
+  color: #405653;
+}
+
+.safety-cool .safety-principles {
+  border-color: rgba(23, 49, 59, 0.2);
+}
+
+.safety-cool .safety-principles article {
+  border-color: rgba(23, 49, 59, 0.16);
+}
+
+.safety-cool .safety-principles h3 {
+  color: var(--ink);
+}
+
+.safety-cool .safety-principles p {
+  color: #4d605c;
+}
+
+.safety-cool .safety-disclaimer {
+  color: #61716d;
+}
+
 .faq-item {
   border-top: 1px solid rgba(23, 49, 59, 0.18);
 }
@@ -1389,8 +1451,12 @@ dd {
 }
 
 .meeting {
+  position: relative;
+  padding-top: 0;
+  padding-bottom: 0;
   padding-right: 0;
   padding-left: 0;
+  background: var(--ink);
 }
 
 .meeting-card h2 {
