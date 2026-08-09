@@ -286,8 +286,8 @@ export default function Home() {
       <section className="guide section-light" id="guide">
         <figure className="guide-portrait">
           <img
-            src="/guide-portrait.jpg"
-            alt="Ведущий практики Шамаш"
+            src="/guide-portrait-new.png"
+            alt="Ведущий практики Шамаш с деревянным посохом"
             loading="lazy"
             decoding="async"
           />
