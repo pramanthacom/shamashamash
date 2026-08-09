@@ -68,38 +68,39 @@ export default function Home() {
       </header>
 
       <section className="hero section-dark" id="top">
-        <div className="hero-copy">
-          <p className="eyebrow">Групповая практика изменённого внимания</p>
-          <h1>Внутреннее путешествие под ритм</h1>
-          <p className="hero-lead">
-            Трансовое погружение, в котором повторяющийся звук, внимание к телу
-            и личное намерение помогают отойти от привычного хода мыслей и
-            встретиться со своим внутренним опытом.
-          </p>
-          <div className="hero-actions">
-            <a className="button" href="#meeting">
-              Узнать о ближайшей встрече
-            </a>
-            <a className="text-link" href="#practice">
-              Сначала понять, что это
-            </a>
-          </div>
-          <ul className="hero-facts" aria-label="Кратко о формате">
-            <li>Раз в неделю</li>
-            <li>До 20 человек</li>
-            <li>Без психоактивных веществ</li>
-          </ul>
+        <h1 className="sr-only">Внутреннее путешествие под ритм</h1>
+
+        <div className="hero-art">
+          <img
+            src="/og.png"
+            alt="Шамаш. Внутреннее путешествие под ритм — световая волна и концентрические круги на тёмном фоне"
+          />
         </div>
 
-        <div className="hero-visual" aria-hidden="true">
-          <div className="signal signal-one" />
-          <div className="signal signal-two" />
-          <div className="signal signal-three" />
-          <div className="rhythm-orbit orbit-one" />
-          <div className="rhythm-orbit orbit-two" />
-          <div className="rhythm-orbit orbit-three" />
-          <div className="rhythm-core" />
-          <p className="visual-caption">ритм · внимание · намерение</p>
+        <div className="hero-details">
+          <div className="hero-copy">
+            <p className="eyebrow">Групповая практика изменённого внимания</p>
+            <p className="hero-lead">
+              Трансовое погружение, в котором повторяющийся звук, внимание к телу
+              и личное намерение помогают отойти от привычного хода мыслей и
+              встретиться со своим внутренним опытом.
+            </p>
+          </div>
+          <div className="hero-cta">
+            <div className="hero-actions">
+              <a className="button" href="#meeting">
+                Узнать о ближайшей встрече
+              </a>
+              <a className="text-link" href="#practice">
+                Сначала понять, что это
+              </a>
+            </div>
+            <ul className="hero-facts" aria-label="Кратко о формате">
+              <li>Раз в неделю</li>
+              <li>До 20 человек</li>
+              <li>Без психоактивных веществ</li>
+            </ul>
+          </div>
         </div>
       </section>
 
