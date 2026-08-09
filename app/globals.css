@@ -674,10 +674,13 @@ blockquote {
 
 .roots-visual {
   position: relative;
+  left: 50%;
+  width: 100vw;
   min-height: 440px;
   margin: 56px 0 0;
   overflow: hidden;
   background: #9f8e76;
+  transform: translateX(-50%);
 }
 
 .roots-visual::after,
@@ -799,6 +802,29 @@ blockquote {
   font-family: Georgia, "Times New Roman", serif;
   font-size: clamp(1.2rem, 1.8vw, 1.72rem);
   line-height: 1.25;
+}
+
+.research-accent {
+  display: grid;
+  grid-template-columns: 180px minmax(0, 1fr);
+  gap: 34px;
+  align-items: start;
+  margin-top: 16px;
+  padding: 24px 36px;
+  border-left: 3px solid #58bfd6;
+  background: rgba(49, 95, 106, 0.08);
+}
+
+.research-accent .method-kicker {
+  margin: 2px 0 0;
+  color: #315f6a;
+}
+
+.research-accent p:last-child {
+  max-width: 1020px;
+  color: #435653;
+  font-size: 1rem;
+  line-height: 1.55;
 }
 
 .source-links {
@@ -1703,9 +1729,14 @@ dd {
     padding: 30px 22px;
   }
 
-  .trust-formula {
+  .trust-formula,
+  .research-accent {
     grid-template-columns: 1fr;
     gap: 14px;
+  }
+
+  .research-accent {
+    padding: 24px 22px;
   }
 
   .source-links {
