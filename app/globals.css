@@ -969,16 +969,26 @@ blockquote {
   gap: clamp(52px, 7vw, 105px);
 }
 
+.meaning.section-paper {
+  padding-top: 78px;
+  padding-bottom: 78px;
+}
+
+.meaning h2 {
+  margin-bottom: 32px;
+  font-size: clamp(2.8rem, 4.5vw, 4.8rem);
+}
+
 .meaning-lenses {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  margin-top: 42px;
+  margin-top: 28px;
   border-top: 1px solid rgba(36, 48, 51, 0.18);
 }
 
 .meaning-lenses p {
   margin: 0;
-  padding: 22px 24px 24px 0;
+  padding: 18px 22px 20px 0;
   border-bottom: 1px solid rgba(36, 48, 51, 0.18);
   color: #52615e;
   font-size: 0.94rem;
@@ -1002,7 +1012,7 @@ blockquote {
 }
 
 .meaning-note {
-  margin: 30px 0 0;
+  margin: 24px 0 0;
   padding-left: 20px;
   border-left: 3px solid rgba(49, 95, 106, 0.45);
   color: #315d67;
@@ -1013,7 +1023,7 @@ blockquote {
 
 .meaning-visual {
   position: relative;
-  height: 600px;
+  height: 560px;
   min-height: 0;
   margin: 0;
   overflow: hidden;
@@ -1021,7 +1031,7 @@ blockquote {
 }
 
 .meaning-visual img {
-  object-position: center 46%;
+  object-position: center 54%;
 }
 
 .meaning-visual figcaption {
@@ -1825,7 +1835,7 @@ dd {
   }
 
   .meaning-visual {
-    height: 500px;
+    height: 460px;
     min-height: 0;
   }
 }
@@ -2063,7 +2073,7 @@ dd {
   }
 
   .meaning-visual {
-    height: 440px;
+    height: 400px;
     min-height: 0;
   }
 
