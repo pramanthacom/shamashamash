@@ -95,16 +95,19 @@ p {
 
 .section-dark {
   overflow: hidden;
-  background: var(--ink);
+  background-color: var(--ink);
+  background-image: repeating-linear-gradient(112deg, transparent 0 8px, rgba(98, 205, 232, 0.026) 9px 9.8px);
   color: var(--warm-paper);
 }
 
 .section-light {
-  background: var(--paper);
+  background-color: var(--paper);
+  background-image: repeating-linear-gradient(112deg, transparent 0 10px, rgba(7, 16, 19, 0.018) 11px 11.7px);
 }
 
 .section-paper {
-  background: var(--warm-paper);
+  background-color: var(--warm-paper);
+  background-image: repeating-linear-gradient(112deg, transparent 0 10px, rgba(23, 49, 59, 0.016) 11px 11.7px);
 }
 
 .section-index,
@@ -170,6 +173,13 @@ p {
 .desktop-nav {
   display: flex;
   gap: 30px;
+  padding: 13px 24px 14px;
+  border: 1px solid rgba(98, 205, 232, 0.12);
+  border-radius: 999px;
+  background:
+    repeating-linear-gradient(112deg, transparent 0 7px, rgba(98, 205, 232, 0.055) 8px 8.7px),
+    rgba(7, 16, 19, 0.42);
+  backdrop-filter: blur(10px);
   color: rgba(244, 246, 242, 0.72);
   font-size: 0.9rem;
 }
@@ -270,6 +280,15 @@ p {
   pointer-events: none;
 }
 
+.hero::before {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  inset: 0;
+  background: repeating-linear-gradient(112deg, transparent 0 8px, rgba(98, 205, 232, 0.025) 9px 9.8px);
+  pointer-events: none;
+}
+
 .hero-art img {
   display: block;
   width: 100%;
@@ -283,7 +302,8 @@ p {
   z-index: 3;
   width: min(calc(100% - 80px), 1480px);
   margin: 0 auto;
-  padding-top: 76px;
+  padding-top: 0;
+  transform: translateY(-34px);
 }
 
 .hero-content .eyebrow {
@@ -291,11 +311,11 @@ p {
 }
 
 .hero-content h1 {
-  max-width: 880px;
+  max-width: 820px;
   margin-bottom: 28px;
-  font-size: clamp(4.3rem, 6.8vw, 7rem);
-  line-height: 0.92;
-  letter-spacing: -0.052em;
+  font-size: clamp(3.55rem, 5.35vw, 5.75rem);
+  line-height: 0.96;
+  letter-spacing: -0.045em;
 }
 
 .hero-lead {
@@ -699,7 +719,8 @@ dd {
 
 .site-footer {
   padding: 88px max(28px, calc((100vw - var(--max-width)) / 2)) 34px;
-  background: var(--ink);
+  background-color: var(--ink);
+  background-image: repeating-linear-gradient(112deg, transparent 0 8px, rgba(98, 205, 232, 0.025) 9px 9.8px);
   color: var(--warm-paper);
 }
 
@@ -1075,7 +1096,7 @@ dd {
 
   .hero-content h1 {
     max-width: 760px;
-    font-size: clamp(4rem, 9.2vw, 6.2rem);
+    font-size: clamp(3.2rem, 7.4vw, 4.8rem);
   }
 
   .intent-grid,
@@ -1178,6 +1199,7 @@ dd {
     position: relative;
     width: calc(100% - 40px);
     padding-top: 74px;
+    transform: translateY(-18px);
   }
 
   .hero-content .eyebrow {
@@ -1188,7 +1210,7 @@ dd {
   .hero-content h1 {
     max-width: 100%;
     margin-bottom: 22px;
-    font-size: clamp(3rem, 14.5vw, 4.3rem);
+    font-size: clamp(2.65rem, 12.5vw, 3.6rem);
     line-height: 0.93;
   }
 
