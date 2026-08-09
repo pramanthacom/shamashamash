@@ -16,7 +16,7 @@ export async function generateMetadata(): Promise<Metadata> {
     openGraph: {
       title: "Внутреннее путешествие под ритм бубна",
       description:
-        "Групповая практика экстатического транса — ритм, тело и личное намерение.",
+        "Групповая практика экстатического транса — ритуальная поза, ритм бубна и личное намерение.",
       images: [
         {
           url: `${origin}/og.png`,
@@ -31,7 +31,7 @@ export async function generateMetadata(): Promise<Metadata> {
       card: "summary_large_image",
       title: "Внутреннее путешествие под ритм бубна",
       description:
-        "Групповая практика экстатического транса — ритм, тело и личное намерение.",
+        "Групповая практика экстатического транса — ритуальная поза, ритм бубна и личное намерение.",
       images: [`${origin}/og.png`],
     },
   };
