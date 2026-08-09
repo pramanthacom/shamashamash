@@ -102,6 +102,7 @@ export default function Home() {
           </ul>
 
           <div className="value-return">
+            <span>Возможный результат</span>
             <p>
               Вернуться в повседневную жизнь с новым ощущением, вопросом
               или возможным следующим шагом.
@@ -152,10 +153,6 @@ export default function Home() {
             </article>
           </div>
 
-          <div className="arrival-note">
-            <strong>Ваш запрос остаётся вашим.</strong>
-            <span>Его не нужно объяснять группе или подгонять под «правильную» тему.</span>
-          </div>
         </div>
       </section>
 
