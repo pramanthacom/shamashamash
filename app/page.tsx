@@ -96,7 +96,7 @@ export default function Home() {
           </div>
           <ul className="hero-facts" aria-label="Кратко о формате">
             <li>Раз в неделю</li>
-            <li>Длительность 3,5–4 часа</li>
+            <li>Длительность 3 часа</li>
             <li>До 20 человек</li>
             <li>Без психоактивных веществ</li>
           </ul>
