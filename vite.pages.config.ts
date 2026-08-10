@@ -10,8 +10,8 @@ export default defineConfig({
     emptyOutDir: true,
     rollupOptions: {
       input: {
-        main: resolve(__dirname, "index.html"),
-        privacy: resolve(__dirname, "privacy/index.html"),
+        main: resolve(__dirname, "pages-src/index.html"),
+        privacy: resolve(__dirname, "pages-src/privacy/index.html"),
       },
     },
   },
