@@ -1235,22 +1235,9 @@ blockquote {
   line-height: 1.2;
 }
 
-.guide-principle {
-  margin: 30px 0 0;
-  padding-left: 22px;
-  border-left: 2px solid #62cde8;
-  color: #324c4c;
-  font-size: 1rem;
-  line-height: 1.55;
-}
-
 .guide-facts,
 .meeting-facts {
   margin: 54px 0 0;
-}
-
-.guide-copy .guide-facts {
-  margin-top: 36px;
 }
 
 .guide-facts div,
@@ -1269,54 +1256,6 @@ dt {
 }
 
 dd {
-  margin-bottom: 0;
-}
-
-.guide-details {
-  margin-top: 12px;
-  border-top: 1px solid rgba(17, 22, 22, 0.15);
-  border-bottom: 1px solid rgba(17, 22, 22, 0.15);
-}
-
-.guide-details summary {
-  cursor: pointer;
-  padding: 18px 0;
-  color: #284f58;
-  font-size: 0.92rem;
-  font-weight: 600;
-  list-style: none;
-}
-
-.guide-details summary::-webkit-details-marker {
-  display: none;
-}
-
-.guide-details summary::after {
-  content: "+";
-  float: right;
-  color: #31788a;
-  font-size: 1.4rem;
-  font-weight: 400;
-  line-height: 0.85;
-}
-
-.guide-details[open] summary::after {
-  content: "−";
-}
-
-.guide-details-content {
-  padding: 2px 0 22px;
-}
-
-.guide-details-content p {
-  max-width: 680px;
-  margin: 0 0 14px;
-  color: #4b5d59;
-  font-size: 0.9rem;
-  line-height: 1.58;
-}
-
-.guide-details-content p:last-child {
   margin-bottom: 0;
 }
 
