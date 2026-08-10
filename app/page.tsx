@@ -442,11 +442,11 @@ export default function Home() {
       <section className="meeting" id="meeting">
         <div className="meeting-card">
           <div className="meeting-copy">
-            <p className="section-index">08 / Ближайшие встречи</p>
-            <h2>Выберите удобную дату</h2>
+            <p className="section-index">08 / Встречи</p>
+            <h2>Узнайте о ближайшей встрече</h2>
             <p>
-              Посмотрите расписание и подробности предстоящих встреч. Там же можно
-              узнать точную стоимость и адрес, задать вопрос и записаться.
+              В Telegram-боте можно узнать актуальные даты, стоимость и адрес,
+              задать вопрос ведущему и записаться на встречу.
             </p>
           </div>
           <div className="meeting-action" id="telegram">
@@ -506,9 +506,8 @@ export default function Home() {
 
           <div className="footer-column">
             <p className="footer-label">Быть на связи</p>
-            <span>Telegram-сообщество — скоро</span>
-            <span>Контакт для вопросов — скоро</span>
-            <ScheduleButton compact label="Ближайшие встречи" />
+            <span>Ответы, вопросы и запись — в Telegram-боте</span>
+            <ScheduleButton compact label="Открыть Telegram-бот" />
           </div>
         </div>
 
@@ -516,7 +515,6 @@ export default function Home() {
           <p>© 2026 Шамаш</p>
           <div>
             <a href="/privacy">Конфиденциальность и cookies</a>
-            <a href="/admin">Управление расписанием</a>
           </div>
         </div>
       </footer>
