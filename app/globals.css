@@ -1682,9 +1682,12 @@ dd {
   padding-bottom: 76px;
 }
 
+.footer-brand .brand-lockup {
+  margin-bottom: 34px;
+}
+
 .footer-brand .wordmark {
   display: inline-block;
-  margin-bottom: 34px;
   font-size: 1.65rem;
 }
 
