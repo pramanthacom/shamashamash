@@ -45,7 +45,7 @@ export default function Home() {
           <a href="#guide">О ведущем</a>
           <a href="#safety">Безопасность</a>
         </nav>
-        <ScheduleButton compact label="Ближайшая встреча" />
+        <ScheduleButton compact label="Ближайшие встречи" />
       </header>
 
       <section className="hero section-dark" id="top">
@@ -76,9 +76,9 @@ export default function Home() {
             </a>
           </div>
           <ul className="hero-facts" aria-label="Кратко о формате">
-            <li>Раз в неделю</li>
-            <li>Длительность 3 часа</li>
-            <li>До 20 человек</li>
+            <li>Москва</li>
+            <li>Около 3 часов</li>
+            <li>До 15 человек</li>
             <li>Без психоактивных веществ</li>
           </ul>
         </div>
@@ -440,31 +440,21 @@ export default function Home() {
 
       <section className="meeting" id="meeting">
         <div className="meeting-card">
-          <div>
-            <p className="section-index">08 / Ближайшая встреча</p>
-            <h2>Можно сначала просто узнать подробности</h2>
+          <div className="meeting-copy">
+            <p className="section-index">08 / Ближайшие встречи</p>
+            <h2>Выберите удобную дату</h2>
             <p>
-              В Telegram-боте будут дата, место, продолжительность, свободные
-              места и короткие вопросы о безопасности.
+              Посмотрите расписание и подробности предстоящих встреч. Там же можно
+              узнать точную стоимость и адрес, задать вопрос и записаться.
             </p>
           </div>
-          <dl className="meeting-facts">
-            <div>
-              <dt>Когда</dt>
-              <dd>Раз в неделю · дата уточняется</dd>
-            </div>
-            <div>
-              <dt>Группа</dt>
-              <dd>До 20 человек</dd>
-            </div>
-            <div>
-              <dt>Участие</dt>
-              <dd>Оргвзнос + добровольный вклад по сердцу</dd>
-            </div>
-          </dl>
           <div className="meeting-action" id="telegram">
-            <ScheduleButton label="Показать ближайшие встречи" />
-            <p>Запись и вопросы перенесём в Telegram. Онлайн-оплаты на сайте пока нет.</p>
+            <ScheduleButton label="Записаться" />
+          </div>
+          <div className="meeting-meta" aria-label="Кратко об участии">
+            <span>Москва</span>
+            <span>До 15 человек</span>
+            <span>Небольшой организационный взнос</span>
           </div>
         </div>
       </section>
@@ -481,6 +471,16 @@ export default function Home() {
               </details>
             ))}
           </div>
+        </div>
+        <div className="faq-contact">
+          <div>
+            <h3>Остался вопрос?</h3>
+            <p>
+              Если вы сомневаетесь, подходит ли вам практика, хотите уточнить
+              детали встречи или рассказать об ограничениях — напишите ведущему.
+            </p>
+          </div>
+          <ScheduleButton label="Задать вопрос" />
         </div>
       </section>
 

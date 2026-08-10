@@ -1562,9 +1562,9 @@ dd {
 
 .meeting-card {
   display: grid;
-  grid-template-columns: minmax(0, 1.1fr) minmax(280px, 0.72fr) minmax(240px, 0.5fr);
-  gap: clamp(40px, 6vw, 88px);
-  align-items: end;
+  grid-template-columns: minmax(0, 1fr) minmax(240px, 0.38fr);
+  gap: 44px clamp(50px, 8vw, 140px);
+  align-items: center;
   padding: clamp(36px, 6vw, 74px);
   background: var(--ink);
   color: var(--warm-paper);
@@ -1588,22 +1588,68 @@ dd {
   color: var(--muted);
 }
 
-.meeting-facts {
-  margin-top: 0;
+.meeting-copy > p:last-child {
+  max-width: 720px;
+  margin-bottom: 0;
 }
 
-.meeting-facts div {
-  grid-template-columns: 80px 1fr;
-  border-color: rgba(81, 215, 239, 0.2);
+.meeting-action {
+  justify-self: end;
 }
 
-.meeting-facts dt {
-  color: var(--ice);
+.meeting-action .button {
+  min-width: 240px;
 }
 
-.meeting-action p {
-  margin: 16px 0 0;
-  font-size: 0.82rem;
+.meeting-meta {
+  display: flex;
+  grid-column: 1 / -1;
+  flex-wrap: wrap;
+  gap: 12px 0;
+  padding-top: 24px;
+  border-top: 1px solid rgba(81, 215, 239, 0.22);
+}
+
+.meeting-meta span {
+  padding: 0 28px;
+  border-right: 1px solid rgba(81, 215, 239, 0.22);
+  color: #b8c4c0;
+  font-size: 0.88rem;
+}
+
+.meeting-meta span:first-child {
+  padding-left: 0;
+}
+
+.meeting-meta span:last-child {
+  padding-right: 0;
+  border-right: 0;
+}
+
+.faq-contact {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 50px;
+  align-items: center;
+  margin-top: 46px;
+  padding: 28px 32px;
+  background: #dce8e5;
+}
+
+.faq-contact h3 {
+  margin: 0 0 6px;
+  color: var(--ink);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.45rem, 2vw, 2rem);
+  font-weight: 400;
+}
+
+.faq-contact p {
+  max-width: 760px;
+  margin: 0;
+  color: #53635f;
+  font-size: 0.92rem;
+  line-height: 1.55;
 }
 
 .faq-grid h2 {
@@ -2005,6 +2051,15 @@ dd {
   .value-head,
   .arrival-head {
     gap: 34px;
+  }
+
+  .meeting-action {
+    justify-self: start;
+  }
+
+  .faq-contact {
+    grid-template-columns: 1fr;
+    gap: 24px;
   }
 
   .value-list {
@@ -2437,6 +2492,28 @@ dd {
 
   .meeting-card {
     padding: 72px 20px;
+  }
+
+  .meeting-meta {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .meeting-meta span,
+  .meeting-meta span:first-child,
+  .meeting-meta span:last-child {
+    padding: 0 0 10px;
+    border-right: 0;
+    border-bottom: 1px solid rgba(81, 215, 239, 0.16);
+  }
+
+  .meeting-meta span:last-child {
+    padding-bottom: 0;
+    border-bottom: 0;
+  }
+
+  .faq-contact {
+    padding: 24px 20px;
   }
 
   .button {
