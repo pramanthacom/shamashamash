@@ -1282,6 +1282,12 @@ dd {
   color: #c4ceca;
 }
 
+.safety-intro-note {
+  margin: 18px 0 0;
+  color: #92a39e;
+  font-size: 0.92rem;
+}
+
 .safety-lead {
   margin: 28px 0 0;
   color: var(--warm-paper);
@@ -1363,11 +1369,75 @@ dd {
   margin-bottom: 0;
 }
 
-.safety-disclaimer {
-  margin: 16px 0 0;
-  color: #84928e;
-  font-size: 0.82rem;
+.safety-medical-note {
+  display: grid;
+  grid-template-columns: 90px minmax(0, 1fr);
+  gap: 24px;
+  align-items: center;
+  margin-top: 20px;
+  padding: 20px 24px;
+  background: var(--deep);
+  color: var(--warm-paper);
+}
+
+.safety-medical-note strong {
+  color: var(--ice);
+  font-size: 0.76rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.safety-medical-note p {
+  margin: 0;
+  font-size: 0.98rem;
   line-height: 1.5;
+}
+
+.safety-cautions {
+  margin-top: 16px;
+  border-top: 1px solid rgba(23, 49, 59, 0.2);
+  border-bottom: 1px solid rgba(23, 49, 59, 0.2);
+}
+
+.safety-cautions summary {
+  cursor: pointer;
+  padding: 18px 0;
+  color: var(--ink);
+  font-size: 1rem;
+  font-weight: 600;
+  list-style: none;
+}
+
+.safety-cautions summary::-webkit-details-marker {
+  display: none;
+}
+
+.safety-cautions summary::after {
+  content: "+";
+  float: right;
+  color: #31788a;
+  font-size: 1.45rem;
+  font-weight: 400;
+  line-height: 0.8;
+}
+
+.safety-cautions[open] summary::after {
+  content: "−";
+}
+
+.safety-cautions-content {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+  padding: 2px 0 24px;
+}
+
+.safety-cautions-content p {
+  margin: 0;
+  color: #4d605c;
+  font-size: 0.86rem;
+  line-height: 1.55;
 }
 
 .safety.safety-cool {
@@ -1403,8 +1473,8 @@ dd {
   color: #4d605c;
 }
 
-.safety-cool .safety-disclaimer {
-  color: #61716d;
+.safety-cool .safety-intro-note {
+  color: #60726e;
 }
 
 .faq-item {
@@ -2273,6 +2343,17 @@ dd {
 
   .safety-principles span {
     margin-bottom: 14px;
+  }
+
+  .safety-medical-note {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    padding: 20px;
+  }
+
+  .safety-cautions-content {
+    grid-template-columns: 1fr;
+    gap: 14px;
   }
 
   .safety-boundary {
