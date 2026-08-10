@@ -474,8 +474,8 @@ export default function Home() {
               <span className="brand-symbol" aria-hidden="true"><img src="/shamash-symbol.png" alt="" loading="lazy" /></span>
               <span className="wordmark">Шамаш</span>
             </a>
-            <p>Пространство внутреннего путешествия под ритм.</p>
-            <p className="footer-note">Без готовых толкований. С вниманием к человеку и его границам.</p>
+            <p>Пространство экстатического транса.</p>
+            <p className="footer-note">Путешествие вглубь за ответами и поиском себя.</p>
           </div>
 
           <div className="footer-column">
