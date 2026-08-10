@@ -44,6 +44,7 @@ export default function Home() {
           <a href="#roots">Основа метода</a>
           <a href="#guide">О ведущем</a>
           <a href="#safety">Безопасность</a>
+          <a href="#contacts">Контакты</a>
         </nav>
         <ScheduleButton compact label="Ближайшие встречи" />
       </header>
@@ -484,7 +485,7 @@ export default function Home() {
         </div>
       </section>
 
-      <footer className="site-footer">
+      <footer className="site-footer" id="contacts">
         <div className="footer-main">
           <div className="footer-brand">
             <a className="brand-lockup" href="#top">
