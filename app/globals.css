@@ -362,7 +362,7 @@ p {
 .value-screen {
   display: flex;
   align-items: center;
-  min-height: 100svh;
+  min-height: auto;
   padding-top: clamp(64px, 7vw, 88px);
   padding-bottom: clamp(64px, 7vw, 88px);
 }
@@ -454,8 +454,8 @@ p {
 .arrival-screen {
   display: flex;
   align-items: center;
-  min-height: 100svh;
-  margin-top: 18px;
+  min-height: auto;
+  margin-top: 0;
   overflow: hidden;
   padding-top: clamp(64px, 7vw, 88px);
   padding-bottom: clamp(64px, 7vw, 88px);
@@ -466,14 +466,7 @@ p {
 }
 
 .arrival-screen::before {
-  content: "";
-  position: absolute;
-  z-index: 2;
-  top: 0;
-  right: 0;
-  left: 0;
-  height: 9px;
-  background: linear-gradient(90deg, var(--petrol), var(--ice), var(--petrol));
+  content: none;
 }
 
 .arrival-shell {
@@ -1037,7 +1030,7 @@ blockquote {
 }
 
 .meaning {
-  align-items: start;
+  align-items: stretch;
   gap: clamp(52px, 7vw, 105px);
 }
 
@@ -1096,7 +1089,8 @@ blockquote {
 
 .meaning-visual {
   position: relative;
-  height: 560px;
+  align-self: stretch;
+  height: auto;
   min-height: 0;
   margin: 58px 0 0;
   overflow: hidden;
@@ -2243,7 +2237,7 @@ dd {
   }
 
   .arrival-screen {
-    margin-top: 12px;
+    margin-top: 0;
   }
 
   .flow-steps {
