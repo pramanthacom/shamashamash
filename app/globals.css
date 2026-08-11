@@ -1673,7 +1673,10 @@ dd {
   gap: 44px clamp(50px, 8vw, 140px);
   align-items: center;
   padding: clamp(36px, 6vw, 74px);
-  background: var(--ink);
+  background:
+    linear-gradient(90deg, rgba(7, 16, 19, 0.98), rgba(7, 16, 19, 0.9)),
+    repeating-linear-gradient(112deg, transparent 0 8px, rgba(98, 205, 232, 0.035) 9px 9.8px),
+    var(--ink);
   color: var(--warm-paper);
 }
 
