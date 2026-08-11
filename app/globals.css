@@ -154,10 +154,10 @@ p {
   display: block;
   width: 42px;
   height: 42px;
-  overflow: hidden;
-  border: 1px solid rgba(98, 205, 232, 0.34);
-  border-radius: 50%;
-  background: var(--ink);
+  overflow: visible;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
   box-shadow: 0 0 0 rgba(98, 205, 232, 0);
   animation: shamash-symbol-breathe 7.5s ease-in-out infinite;
 }
@@ -181,12 +181,13 @@ p {
 .brand-symbol img {
   position: absolute;
   z-index: 0;
-  top: 50%;
+  top: 53%;
   left: 50%;
   width: 145%;
   height: 145%;
   max-width: none;
   object-fit: cover;
+  clip-path: circle(35% at 50% 48%);
   transform: translate(-50%, -50%);
   animation: shamash-image-breathe 5.8s ease-in-out infinite;
 }
@@ -1674,8 +1675,8 @@ dd {
   align-items: center;
   padding: clamp(36px, 6vw, 74px);
   background:
+    repeating-linear-gradient(112deg, transparent 0 8px, rgba(98, 205, 232, 0.055) 9px 9.8px),
     linear-gradient(90deg, rgba(7, 16, 19, 0.98), rgba(7, 16, 19, 0.9)),
-    repeating-linear-gradient(112deg, transparent 0 8px, rgba(98, 205, 232, 0.035) 9px 9.8px),
     var(--ink);
   color: var(--warm-paper);
 }
