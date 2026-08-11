@@ -121,6 +121,11 @@ export default function Home() {
               или возможным следующим шагом.
             </p>
           </div>
+
+          <div className="section-cta">
+            <p>Если практика вам откликается, посмотрите даты ближайших встреч.</p>
+            <ScheduleButton compact label="Посмотреть ближайшие встречи" />
+          </div>
         </div>
       </section>
 
@@ -301,6 +306,11 @@ export default function Home() {
             <p>Отдыхаем, приходим в себя и даём полученному опыту уложиться. Затем пьём чай, общаемся, по желанию делимся впечатлениями и задаём вопросы.</p>
           </li>
         </ol>
+
+        <div className="section-cta section-cta-dark">
+          <p>Перед встречей ведущий расскажет все детали и ответит на оставшиеся вопросы.</p>
+          <ScheduleButton compact label="Записаться" />
+        </div>
       </section>
 
       <section className="guide section-paper" id="guide" data-reveal>

@@ -527,6 +527,37 @@ p {
   line-height: 1.14;
 }
 
+.section-cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+  margin-top: 28px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(23, 49, 59, 0.16);
+}
+
+.section-cta p {
+  max-width: 590px;
+  margin: 0;
+  color: #53635f;
+  font-size: 0.9rem;
+  line-height: 1.55;
+}
+
+.section-cta .button {
+  flex: 0 0 auto;
+  min-width: 230px;
+}
+
+.section-cta-dark {
+  border-color: rgba(98, 205, 232, 0.2);
+}
+
+.section-cta-dark p {
+  color: #aebbb7;
+}
+
 .arrival-screen {
   display: flex;
   align-items: center;
@@ -1637,38 +1668,13 @@ dd {
 }
 
 .meeting-card {
-  position: relative;
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(240px, 0.38fr);
   gap: 44px clamp(50px, 8vw, 140px);
   align-items: center;
-  overflow: hidden;
   padding: clamp(36px, 6vw, 74px);
   background: var(--ink);
   color: var(--warm-paper);
-}
-
-.meeting-card::before {
-  content: "";
-  position: absolute;
-  z-index: 0;
-  top: 50%;
-  right: clamp(235px, 19vw, 390px);
-  width: clamp(320px, 31vw, 560px);
-  aspect-ratio: 4 / 3;
-  background:
-    radial-gradient(circle, transparent 30%, rgba(7, 16, 19, 0.88) 78%),
-    url("/meeting-ritual-v1.png") center / cover no-repeat;
-  opacity: 0.13;
-  filter: saturate(0.55);
-  mask-image: radial-gradient(ellipse, #000 18%, transparent 72%);
-  pointer-events: none;
-  transform: translateY(-50%);
-}
-
-.meeting-card > * {
-  position: relative;
-  z-index: 1;
 }
 
 .meeting {
@@ -2778,15 +2784,6 @@ dd {
     padding: 72px 20px;
   }
 
-  .meeting-card::before {
-    top: auto;
-    right: -92px;
-    bottom: 40px;
-    width: 300px;
-    opacity: 0.12;
-    transform: none;
-  }
-
   .meeting-action,
   .meeting-action .button,
   .faq-contact .button,
@@ -2819,6 +2816,19 @@ dd {
 
   .button {
     width: 100%;
+  }
+
+  .section-cta {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 24px;
+    padding-top: 20px;
+  }
+
+  .section-cta .button {
+    width: 100%;
+    min-width: 0;
   }
 
   .back-to-top {
