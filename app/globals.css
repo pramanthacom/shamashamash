@@ -150,6 +150,7 @@ p {
 
 .brand-symbol {
   position: relative;
+  isolation: isolate;
   display: block;
   width: 42px;
   height: 42px;
@@ -157,10 +158,29 @@ p {
   border: 1px solid rgba(98, 205, 232, 0.34);
   border-radius: 50%;
   background: var(--ink);
+  box-shadow: 0 0 0 rgba(98, 205, 232, 0);
+  animation: shamash-symbol-breathe 7.5s ease-in-out infinite;
+}
+
+.brand-symbol::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  inset: 17%;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle, rgba(244, 246, 242, 0.44) 0 10%, rgba(98, 205, 232, 0.2) 22%, transparent 58%),
+    conic-gradient(from 12deg, transparent 0 12deg, rgba(98, 205, 232, 0.16) 14deg 16deg, transparent 18deg 42deg);
+  mix-blend-mode: screen;
+  opacity: 0.2;
+  pointer-events: none;
+  transform: scale(0.94);
+  animation: shamash-core-breathe 7.5s ease-in-out infinite;
 }
 
 .brand-symbol img {
   position: absolute;
+  z-index: 0;
   top: 50%;
   left: 50%;
   width: 145%;
@@ -313,6 +333,62 @@ p {
 .hero-art img {
   object-fit: cover;
   object-position: center;
+}
+
+.hero-star,
+.hero-spark {
+  position: absolute;
+  z-index: 1;
+  border-radius: 999px;
+  pointer-events: none;
+  mix-blend-mode: screen;
+}
+
+.hero-star {
+  right: clamp(72px, 11vw, 188px);
+  bottom: clamp(82px, 13vh, 172px);
+  width: clamp(86px, 8vw, 148px);
+  aspect-ratio: 1;
+  background:
+    radial-gradient(circle, rgba(244, 246, 242, 0.88) 0 2%, rgba(98, 205, 232, 0.42) 8%, rgba(98, 205, 232, 0.12) 24%, transparent 62%),
+    radial-gradient(circle, rgba(98, 205, 232, 0.2) 0 18%, transparent 70%);
+  filter: blur(0.2px);
+  opacity: 0.28;
+  transform: scale(0.88);
+  animation: hero-star-ignite 7.8s ease-in-out infinite;
+}
+
+.hero-star::before,
+.hero-star::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 115%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(244, 246, 242, 0.7), transparent);
+  opacity: 0.22;
+  transform: translate(-50%, -50%) rotate(18deg);
+}
+
+.hero-star::after {
+  width: 1px;
+  height: 115%;
+  transform: translate(-50%, -50%) rotate(18deg);
+}
+
+.hero-spark {
+  top: 60%;
+  left: 64%;
+  width: 7px;
+  height: 7px;
+  background: rgba(244, 246, 242, 0.9);
+  box-shadow:
+    0 0 10px rgba(244, 246, 242, 0.75),
+    0 0 26px rgba(98, 205, 232, 0.5);
+  opacity: 0;
+  transform: translate3d(-13vw, -4vh, 0) scale(0.45);
+  animation: hero-spark-travel 7.8s cubic-bezier(0.2, 0.72, 0.34, 1) infinite;
 }
 
 .hero-content {
@@ -1691,9 +1767,19 @@ dd {
 }
 
 .site-footer {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
   padding: 88px max(28px, calc((100vw - var(--max-width)) / 2)) 34px;
   background-color: var(--ink);
-  background-image: repeating-linear-gradient(112deg, transparent 0 8px, rgba(98, 205, 232, 0.025) 9px 9.8px);
+  background-image:
+    linear-gradient(90deg, rgba(7, 16, 19, 0.96) 0%, rgba(7, 16, 19, 0.88) 42%, rgba(7, 16, 19, 0.58) 100%),
+    linear-gradient(0deg, rgba(7, 16, 19, 0.38), rgba(7, 16, 19, 0.1) 48%, rgba(7, 16, 19, 0.42)),
+    repeating-linear-gradient(112deg, transparent 0 8px, rgba(98, 205, 232, 0.025) 9px 9.8px),
+    url("/footer-symbols-desktop.png");
+  background-position: center, center, center, right bottom;
+  background-repeat: no-repeat, no-repeat, repeat, no-repeat;
+  background-size: cover, cover, auto, min(980px, 70vw) auto;
   color: var(--warm-paper);
 }
 
@@ -2380,6 +2466,22 @@ dd {
     transform-origin: center center;
   }
 
+  .hero-star {
+    top: 68%;
+    right: 4%;
+    bottom: auto;
+    width: 118px;
+    opacity: 0.24;
+  }
+
+  .hero-spark {
+    top: 61%;
+    left: 57%;
+    width: 6px;
+    height: 6px;
+    transform: translate3d(-16vw, -3vh, 0) scale(0.4);
+  }
+
   .hero-art::after {
     background:
       linear-gradient(180deg, rgba(4, 12, 15, 0.28) 0%, rgba(4, 12, 15, 0.56) 48%, rgba(4, 12, 15, 0.14) 74%, rgba(4, 12, 15, 0.3) 100%),
@@ -2703,6 +2805,13 @@ dd {
 
   .site-footer {
     padding: 68px 20px 28px;
+    background-image:
+      linear-gradient(180deg, rgba(7, 16, 19, 0.96) 0%, rgba(7, 16, 19, 0.9) 38%, rgba(7, 16, 19, 0.62) 100%),
+      repeating-linear-gradient(112deg, transparent 0 8px, rgba(98, 205, 232, 0.026) 9px 9.8px),
+      url("/footer-symbols-mobile.png");
+    background-position: center, center, center bottom;
+    background-repeat: no-repeat, repeat, no-repeat;
+    background-size: cover, auto, cover;
   }
 
   .footer-main,
@@ -2757,6 +2866,78 @@ dd {
   }
 }
 
+@keyframes shamash-symbol-breathe {
+  0%,
+  100% {
+    box-shadow:
+      0 0 0 rgba(98, 205, 232, 0),
+      0 0 16px rgba(98, 205, 232, 0.06);
+    transform: translateZ(0) scale(1);
+  }
+
+  46% {
+    box-shadow:
+      0 0 22px rgba(98, 205, 232, 0.16),
+      0 0 42px rgba(98, 205, 232, 0.08);
+    transform: translateZ(0) scale(1.018);
+  }
+}
+
+@keyframes shamash-core-breathe {
+  0%,
+  100% {
+    opacity: 0.15;
+    transform: scale(0.88) rotate(0deg);
+  }
+
+  48% {
+    opacity: 0.36;
+    transform: scale(1.08) rotate(8deg);
+  }
+}
+
+@keyframes hero-star-ignite {
+  0%,
+  60%,
+  100% {
+    opacity: 0.16;
+    transform: scale(0.84) rotate(0deg);
+  }
+
+  72% {
+    opacity: 0.46;
+    transform: scale(1.04) rotate(7deg);
+  }
+
+  78% {
+    opacity: 0.32;
+    transform: scale(0.96) rotate(7deg);
+  }
+}
+
+@keyframes hero-spark-travel {
+  0%,
+  58%,
+  100% {
+    opacity: 0;
+    transform: translate3d(-14vw, -4vh, 0) scale(0.45);
+  }
+
+  66% {
+    opacity: 0.82;
+  }
+
+  76% {
+    opacity: 0.68;
+    transform: translate3d(12vw, 7vh, 0) scale(1);
+  }
+
+  82% {
+    opacity: 0;
+    transform: translate3d(14vw, 8vh, 0) scale(0.2);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
@@ -2768,6 +2949,22 @@ dd {
   .mobile-nav,
   .mobile-menu-toggle span {
     transition: none;
+  }
+
+  .brand-symbol,
+  .brand-symbol::before,
+  .hero-star,
+  .hero-spark {
+    animation: none;
+  }
+
+  .hero-spark {
+    opacity: 0;
+  }
+
+  .hero-star {
+    opacity: 0.18;
+    transform: scale(0.92);
   }
 
   [data-reveal] {

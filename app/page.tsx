@@ -63,6 +63,8 @@ export default function Home() {
               fetchPriority="high"
             />
           </picture>
+          <span className="hero-star" aria-hidden="true" />
+          <span className="hero-spark" aria-hidden="true" />
         </div>
 
         <div className="hero-content">

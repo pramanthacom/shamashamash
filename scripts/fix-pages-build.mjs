@@ -21,3 +21,7 @@ await mkdir("privacy", { recursive: true });
 await cp(join(dist, "privacy", "index.html"), join("privacy", "index.html"));
 await rm("assets", { recursive: true, force: true });
 await cp(join(dist, "assets"), "assets", { recursive: true });
+
+for (const asset of ["footer-symbols-desktop.png", "footer-symbols-mobile.png"]) {
+  await cp(join(dist, asset), asset);
+}
