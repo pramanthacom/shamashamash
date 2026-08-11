@@ -1,5 +1,8 @@
 import { CookieNotice } from "./components/CookieNotice";
+import { BackToTop } from "./components/BackToTop";
+import { MobileMenu } from "./components/MobileMenu";
 import { ScheduleButton } from "./components/ScheduleButton";
+import { ScrollReveal } from "./components/ScrollReveal";
 
 const questions = [
   {
@@ -46,6 +49,7 @@ export default function Home() {
           <a href="#safety">Безопасность</a>
           <a href="#contacts">Контакты</a>
         </nav>
+        <MobileMenu />
         <ScheduleButton compact label="Ближайшие встречи" />
       </header>
 
@@ -85,7 +89,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="value-screen section-paper" id="practice">
+      <section className="value-screen section-paper" id="practice" data-reveal>
         <div className="value-shell">
           <div className="value-head">
             <div>
@@ -119,7 +123,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="arrival-screen section-light" id="come-with">
+      <section className="arrival-screen section-light" id="come-with" data-reveal>
         <div className="arrival-shell">
           <div className="arrival-head">
             <div>
@@ -164,7 +168,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="roots section-paper" id="roots">
+      <section className="roots section-paper" id="roots" data-reveal>
         <p className="section-index">03 / Происхождение метода</p>
         <div className="roots-heading">
           <h2>Способ искать ответы, которому тысячи лет</h2>
@@ -240,7 +244,7 @@ export default function Home() {
 
       </section>
 
-      <section className="meaning section-light">
+      <section className="meaning section-light" data-reveal>
         <div className="meaning-copy">
           <p className="section-index">04 / Один опыт — разные слои</p>
           <h2>Не нужно заранее выбирать, во что верить</h2>
@@ -262,7 +266,7 @@ export default function Home() {
         </figure>
       </section>
 
-      <section className="journey-flow section-dark" id="how-it-goes">
+      <section className="journey-flow section-dark" id="how-it-goes" data-reveal>
         <div className="flow-heading">
           <div>
             <p className="section-index">05 / Как проходит встреча</p>
@@ -298,7 +302,7 @@ export default function Home() {
         </ol>
       </section>
 
-      <section className="guide section-paper" id="guide">
+      <section className="guide section-paper" id="guide" data-reveal>
         <figure className="guide-portrait">
           <img
             src="/guide-portrait-new.png"
@@ -363,7 +367,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="safety section-light safety-cool" id="safety">
+      <section className="safety section-light safety-cool" id="safety" data-reveal>
         <p className="section-index">07 / Безопасность</p>
         <div className="safety-heading">
           <h2>Транс — естественная способность человека</h2>
@@ -439,18 +443,20 @@ export default function Home() {
         </details>
       </section>
 
-      <section className="meeting" id="meeting">
+      <section className="meeting" id="meeting" data-reveal>
         <div className="meeting-card">
           <div className="meeting-copy">
             <p className="section-index">08 / Встречи</p>
             <h2>Узнайте о ближайшей встрече</h2>
             <p>
               В Telegram-боте можно узнать актуальные даты, стоимость и адрес,
-              задать вопрос ведущему и записаться на встречу.
+              задать вопрос ведущему и записаться на встречу. В группе будут
+              появляться новости и дополнительные материалы.
             </p>
           </div>
           <div className="meeting-action" id="telegram">
             <ScheduleButton label="Записаться" />
+            <ScheduleButton kind="group" label="Группа в ТГ" variant="secondary" />
           </div>
           <div className="meeting-meta" aria-label="Кратко об участии">
             <span>Москва</span>
@@ -460,7 +466,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="faq section-paper">
+      <section className="faq section-paper" data-reveal>
         <p className="section-index">09 / Вопросы</p>
         <div className="faq-grid">
           <h2>Перед первой встречей</h2>
@@ -481,11 +487,11 @@ export default function Home() {
               детали встречи или рассказать об ограничениях — напишите ведущему.
             </p>
           </div>
-          <ScheduleButton label="Задать вопрос" />
+          <ScheduleButton compact label="Задать вопрос" />
         </div>
       </section>
 
-      <footer className="site-footer" id="contacts">
+      <footer className="site-footer" id="contacts" data-reveal>
         <div className="footer-main">
           <div className="footer-brand">
             <a className="brand-lockup" href="#top">
@@ -507,7 +513,10 @@ export default function Home() {
           <div className="footer-column">
             <p className="footer-label">Быть на связи</p>
             <span>Ответы, вопросы и запись — в Telegram-боте</span>
-            <ScheduleButton compact label="Открыть Telegram-бот" />
+            <div className="footer-actions">
+              <ScheduleButton compact label="Связаться" />
+              <ScheduleButton compact kind="group" label="Группа в ТГ" variant="secondary" />
+            </div>
           </div>
         </div>
 
@@ -518,7 +527,9 @@ export default function Home() {
           </div>
         </div>
       </footer>
+      <BackToTop />
       <CookieNotice />
+      <ScrollReveal />
     </main>
   );
 }
