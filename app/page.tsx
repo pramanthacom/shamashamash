@@ -512,7 +512,6 @@ export default function Home() {
 
           <div className="footer-column">
             <p className="footer-label">Быть на связи</p>
-            <span>Ответы, вопросы и запись — в Telegram-боте</span>
             <div className="footer-actions">
               <ScheduleButton compact label="Связаться" />
               <ScheduleButton compact kind="group" label="Группа в ТГ" variant="secondary" />
