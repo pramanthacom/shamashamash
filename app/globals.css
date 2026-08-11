@@ -383,7 +383,7 @@ p {
   width: min(calc(100% - 80px), 1480px);
   margin: 0 auto;
   padding-top: 0;
-  transform: translateY(12px);
+  transform: translateY(0);
 }
 
 .hero-content .eyebrow {
@@ -1637,13 +1637,38 @@ dd {
 }
 
 .meeting-card {
+  position: relative;
   display: grid;
-  grid-template-columns: minmax(360px, 1fr) minmax(300px, 0.72fr) minmax(220px, 0.38fr);
-  gap: 44px clamp(28px, 4vw, 72px);
+  grid-template-columns: minmax(0, 1fr) minmax(240px, 0.38fr);
+  gap: 44px clamp(50px, 8vw, 140px);
   align-items: center;
+  overflow: hidden;
   padding: clamp(36px, 6vw, 74px);
   background: var(--ink);
   color: var(--warm-paper);
+}
+
+.meeting-card::before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  top: 50%;
+  right: clamp(235px, 19vw, 390px);
+  width: clamp(320px, 31vw, 560px);
+  aspect-ratio: 4 / 3;
+  background:
+    radial-gradient(circle, transparent 30%, rgba(7, 16, 19, 0.88) 78%),
+    url("/meeting-ritual-v1.png") center / cover no-repeat;
+  opacity: 0.13;
+  filter: saturate(0.55);
+  mask-image: radial-gradient(ellipse, #000 18%, transparent 72%);
+  pointer-events: none;
+  transform: translateY(-50%);
+}
+
+.meeting-card > * {
+  position: relative;
+  z-index: 1;
 }
 
 .meeting {
@@ -1667,35 +1692,6 @@ dd {
 .meeting-copy > p:last-child {
   max-width: 720px;
   margin-bottom: 0;
-}
-
-.meeting-visual {
-  position: relative;
-  min-width: 0;
-  aspect-ratio: 4 / 3;
-  overflow: hidden;
-  border: 1px solid rgba(81, 215, 239, 0.14);
-  border-radius: 50% 50% 46% 54% / 42% 48% 52% 58%;
-  background: #061014;
-  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.28);
-}
-
-.meeting-visual::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(circle at 55% 46%, transparent 20%, rgba(7, 16, 19, 0.1) 62%, rgba(7, 16, 19, 0.64) 100%),
-    linear-gradient(180deg, rgba(7, 16, 19, 0.08), rgba(7, 16, 19, 0.32));
-  pointer-events: none;
-}
-
-.meeting-visual img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: 56% center;
-  filter: saturate(0.86) brightness(0.82);
 }
 
 .meeting-action {
@@ -1798,8 +1794,14 @@ dd {
   color: var(--warm-paper);
 }
 
-.footer-art {
+.site-footer::before {
   display: none;
+}
+
+.footer-main,
+.footer-bottom {
+  position: relative;
+  z-index: 1;
 }
 
 .footer-main {
@@ -2319,12 +2321,6 @@ dd {
     justify-self: start;
   }
 
-  .meeting-visual {
-    width: 100%;
-    aspect-ratio: 16 / 7;
-    border-radius: 28px;
-  }
-
   .faq-contact {
     grid-template-columns: 1fr;
     gap: 24px;
@@ -2507,7 +2503,7 @@ dd {
   .hero-content {
     position: relative;
     width: calc(100% - 40px);
-    padding-top: 74px;
+    padding-top: 58px;
     transform: translateY(0);
   }
 
@@ -2778,9 +2774,13 @@ dd {
     padding: 72px 20px;
   }
 
-  .meeting-visual {
-    aspect-ratio: 3 / 2;
-    border-radius: 22px;
+  .meeting-card::before {
+    top: auto;
+    right: -92px;
+    bottom: 40px;
+    width: 300px;
+    opacity: 0.12;
+    transform: none;
   }
 
   .meeting-action,
@@ -2825,7 +2825,7 @@ dd {
   }
 
   .site-footer {
-    padding: 68px 20px 28px;
+    padding: 58px 20px 24px;
     background-image:
       linear-gradient(180deg, rgba(7, 16, 19, 0.98), rgba(7, 16, 19, 0.94)),
       repeating-linear-gradient(112deg, transparent 0 8px, rgba(98, 205, 232, 0.026) 9px 9.8px);
@@ -2834,30 +2834,21 @@ dd {
     background-size: cover, auto;
   }
 
-  .footer-art {
-    position: relative;
-    display: block;
-    height: 330px;
-    margin: 0 -20px 34px;
-    overflow: hidden;
-  }
-
-  .footer-art::after {
+  .site-footer::before {
     content: "";
     position: absolute;
-    inset: 0;
+    z-index: 0;
+    right: -78px;
+    bottom: -106px;
+    display: block;
+    width: 390px;
+    height: 430px;
     background:
-      linear-gradient(180deg, var(--ink) 0%, transparent 22%, transparent 78%, var(--ink) 100%),
-      linear-gradient(90deg, rgba(7, 16, 19, 0.38), transparent 28%, transparent 72%, rgba(7, 16, 19, 0.34));
+      linear-gradient(180deg, var(--ink) 0%, transparent 34%, transparent 72%, var(--ink) 100%),
+      url("/footer-symbols-mobile.png") center 72% / cover no-repeat;
+    opacity: 0.3;
+    mask-image: radial-gradient(ellipse at 65% 62%, #000 12%, transparent 72%);
     pointer-events: none;
-  }
-
-  .footer-art img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center 74%;
-    filter: brightness(0.9) saturate(0.86);
   }
 
   .footer-main,
@@ -2867,7 +2858,7 @@ dd {
   }
 
   .footer-main {
-    padding-bottom: 52px;
+    padding-bottom: 38px;
   }
 
   .footer-bottom,
