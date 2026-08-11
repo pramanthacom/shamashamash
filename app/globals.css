@@ -1787,6 +1787,20 @@ dd {
   color: #596663;
 }
 
+.faq-answer-part {
+  display: block;
+  margin-top: 14px;
+}
+
+.faq-answer-part:first-child {
+  margin-top: 0;
+}
+
+.faq-answer-part strong {
+  color: #315f6a;
+  font-weight: 600;
+}
+
 .site-footer {
   position: relative;
   isolation: isolate;
