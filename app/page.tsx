@@ -64,7 +64,6 @@ export default function Home() {
             />
           </picture>
           <span className="hero-star" aria-hidden="true" />
-          <span className="hero-spark" aria-hidden="true" />
         </div>
 
         <div className="hero-content">
@@ -456,6 +455,9 @@ export default function Home() {
               появляться новости и дополнительные материалы.
             </p>
           </div>
+          <div className="meeting-visual" aria-hidden="true">
+            <img src="/meeting-ritual-v1.png" alt="" loading="lazy" />
+          </div>
           <div className="meeting-action" id="telegram">
             <ScheduleButton label="Записаться" />
             <ScheduleButton kind="group" label="Группа в ТГ" variant="secondary" />
@@ -519,6 +521,10 @@ export default function Home() {
               <ScheduleButton compact kind="group" label="Группа в ТГ" variant="secondary" />
             </div>
           </div>
+        </div>
+
+        <div className="footer-art" aria-hidden="true">
+          <img src="/footer-symbols-mobile.png" alt="" loading="lazy" />
         </div>
 
         <div className="footer-bottom">
