@@ -1,7 +1,7 @@
 import { CookieNotice } from "./components/CookieNotice";
 import { BackToTop } from "./components/BackToTop";
 import { MobileMenu } from "./components/MobileMenu";
-import { ScheduleButton } from "./components/ScheduleButton";
+import { ScheduleButton, TELEGRAM_BOT_URL, VK_BOT_URL } from "./components/ScheduleButton";
 import { ScrollReveal } from "./components/ScrollReveal";
 
 const questions = [
@@ -65,8 +65,19 @@ export default function Home() {
           <a href="#safety">Безопасность</a>
           <a href="#contacts">Контакты</a>
         </nav>
+        <div className="header-socials" aria-label="Запись через мессенджеры">
+          <a href={TELEGRAM_BOT_URL} target="_blank" rel="noreferrer" aria-label="Записаться через Telegram-бота">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M20.7 3.7 3.9 10.2c-1.1.4-1.1 1.1-.2 1.4l4.3 1.3 1.7 5.1c.2.6.1.8.7.8.5 0 .8-.2 1.1-.5l2.1-2 4.4 3.2c.8.4 1.4.2 1.6-.8l2.8-13.3c.3-1.2-.5-1.8-1.7-1.3Zm-2.5 3-7.1 6.4-.3 3.4-1.4-4.3 8-5.1c.4-.3.8-.6.8-.4Z" />
+            </svg>
+          </a>
+          <a href={VK_BOT_URL} target="_blank" rel="noreferrer" aria-label="Записаться через ВКонтакте-бота">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12.6 18.2h1.1s.3 0 .5-.2c.2-.2.2-.6.2-.6s0-1.9.9-2.2c.8-.3 1.9 1.8 3 2.6.8.6 1.5.5 1.5.5l3-.1s1.6-.1.8-1.3c-.1-.1-.6-1.2-2.9-3.3-2.4-2.2-2.1-1.8.8-5.4 1.8-2.2 2.5-3.6 2.3-4.1-.2-.5-1.3-.4-1.3-.4l-3.4.1s-.3 0-.4.1c-.2.1-.3.4-.3.4s-.7 1.9-1.7 3.5c-2 3.4-2.8 3.6-3.1 3.4-.8-.5-.6-2-.6-3.1 0-3.5.5-5-.9-5.4-.5-.2-.8-.3-2-.3-1.5 0-2.7 0-3.4.4-.5.3-.8.9-.6.9.2 0 .8.1 1.1.5.4.5.4 1.7.4 1.7s.2 3.3-.5 3.7c-.5.3-1.2-.3-2.8-3.4-.8-1.6-1.4-3.3-1.4-3.3s-.1-.3-.3-.5c-.2-.2-.5-.2-.5-.2l-3.2.1s-.5 0-.7.2c-.2.2 0 .6 0 .6s2.5 5.9 5.3 8.9c2.6 2.8 5.6 2.6 5.6 2.6Z" />
+            </svg>
+          </a>
+        </div>
         <MobileMenu />
-        <ScheduleButton compact label="Ближайшие встречи" />
       </header>
 
       <section className="hero section-dark" id="top">
@@ -476,14 +487,13 @@ export default function Home() {
             <p className="section-index">08 / Встречи</p>
             <h2>Узнайте о ближайшей встрече</h2>
             <p>
-              В Telegram-боте можно узнать актуальные даты, стоимость и адрес,
-              задать вопрос ведущему и записаться на встречу. В группе будут
-              появляться новости и дополнительные материалы.
+              В Telegram- или VK-боте можно узнать актуальные даты, стоимость и адрес,
+              задать вопрос ведущему и записаться на встречу.
             </p>
           </div>
           <div className="meeting-action" id="telegram">
-            <ScheduleButton label="Записаться" />
-            <ScheduleButton kind="group" label="Группа в ТГ" variant="secondary" />
+            <ScheduleButton label="Записаться в ТГ Бот" />
+            <ScheduleButton kind="vk" label="Записаться в ВК Бот" variant="secondary" />
           </div>
           <div className="meeting-meta" aria-label="Кратко об участии">
             <span>Москва</span>
@@ -540,8 +550,8 @@ export default function Home() {
           <div className="footer-column">
             <p className="footer-label">Быть на связи</p>
             <div className="footer-actions">
-              <ScheduleButton compact label="Связаться" />
-              <ScheduleButton compact kind="group" label="Группа в ТГ" variant="secondary" />
+              <ScheduleButton compact label="Связаться в ТГ" />
+              <ScheduleButton compact kind="vk" label="Связаться в ВК" variant="secondary" />
             </div>
           </div>
         </div>

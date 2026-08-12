@@ -1,41 +1,55 @@
 import type { Metadata } from "next";
-import { headers } from "next/headers";
 import "./globals.css";
 
-export async function generateMetadata(): Promise<Metadata> {
-  const headerStore = await headers();
-  const host = headerStore.get("host") ?? "127.0.0.1:5173";
-  const forwardedProtocol = headerStore.get("x-forwarded-proto");
-  const protocol = forwardedProtocol ?? (host.includes("localhost") || host.startsWith("127.") ? "http" : "https");
-  const origin = `${protocol}://${host}`;
+const siteUrl = "https://shamashamash.ru";
+const title = "Групповая практика экстатического транса с Amash | Шамаш";
+const description =
+  "Групповая практика экстатического транса с Amash. Путешествие внутрь себя под ритм бубна. Встречи в Москве, запись через Telegram и VK.";
 
-  return {
-    title: "Шамаш — внутреннее путешествие под ритм",
-    description:
-      "Групповая практика экстатического транса с древними шаманскими корнями — ритуальная поза, ритм бубна и личное намерение.",
-    openGraph: {
-      title: "Внутреннее путешествие под ритм бубна",
-      description:
-        "Групповая практика экстатического транса с древними шаманскими корнями — ритуальная поза, ритм бубна и личное намерение.",
-      images: [
-        {
-          url: `${origin}/og.png`,
-          width: 1728,
-          height: 909,
-          alt: "Шамаш — внутреннее путешествие под ритм",
-        },
-      ],
-      type: "website",
+export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
+  title,
+  description,
+  applicationName: "Шамаш",
+  alternates: { canonical: "/" },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
     },
-    twitter: {
-      card: "summary_large_image",
-      title: "Внутреннее путешествие под ритм бубна",
-      description:
-        "Групповая практика экстатического транса с древними шаманскими корнями — ритуальная поза, ритм бубна и личное намерение.",
-      images: [`${origin}/og.png`],
-    },
-  };
-}
+  },
+  openGraph: {
+    title: "Внутреннее путешествие под ритм бубна | Шамаш",
+    description,
+    url: "/",
+    siteName: "Шамаш",
+    locale: "ru_RU",
+    type: "website",
+    images: [
+      {
+        url: "/og.png",
+        width: 1200,
+        height: 630,
+        alt: "Шамаш — групповая практика экстатического транса с Amash",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Внутреннее путешествие под ритм бубна | Шамаш",
+    description,
+    images: ["/og.png"],
+  },
+  icons: {
+    icon: "/favicon.svg",
+  },
+  category: "wellness",
+};
 
 export default function RootLayout({
   children,
