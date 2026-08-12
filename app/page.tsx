@@ -494,6 +494,7 @@ export default function Home() {
           <div className="meeting-action" id="telegram">
             <ScheduleButton label="Записаться в ТГ Бот" />
             <ScheduleButton kind="vk" label="Записаться в ВК Бот" variant="secondary" />
+            <ScheduleButton kind="group" label="Группа в ТГ" variant="secondary" />
           </div>
           <div className="meeting-meta" aria-label="Кратко об участии">
             <span>Москва</span>
@@ -552,6 +553,7 @@ export default function Home() {
             <div className="footer-actions">
               <ScheduleButton compact label="Связаться в ТГ" />
               <ScheduleButton compact kind="vk" label="Связаться в ВК" variant="secondary" />
+              <ScheduleButton compact kind="group" label="Группа в ТГ" variant="secondary" />
             </div>
           </div>
         </div>
