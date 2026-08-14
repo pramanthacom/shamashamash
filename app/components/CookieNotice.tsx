@@ -16,7 +16,7 @@ export function CookieNotice() {
   return (
     <aside className="cookie-notice" aria-label="Уведомление о cookies">
       <p>
-        Сайт использует только технические cookies и локальное хранилище, необходимые для его работы.
+        Сайт использует технические cookies, локальное хранилище и Яндекс.Метрику для анализа посещаемости.
         Подробнее — в <a href="/privacy">политике конфиденциальности</a>.
       </p>
       <button
