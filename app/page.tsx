@@ -492,8 +492,8 @@ export default function Home() {
             </p>
           </div>
           <div className="meeting-action" id="telegram">
-            <ScheduleButton label="Записаться в ТГ Бот" />
-            <ScheduleButton kind="vk" label="Записаться в ВК Бот" variant="secondary" />
+            <ScheduleButton label="Записаться в ТГ" />
+            <ScheduleButton kind="vk" label="Записаться в ВК" variant="secondary" />
             <ScheduleButton kind="group" label="Группа в ТГ" variant="secondary" />
           </div>
           <div className="meeting-meta" aria-label="Кратко об участии">
